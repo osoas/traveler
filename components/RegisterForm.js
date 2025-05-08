@@ -3,14 +3,19 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 
 import { Link } from 'expo-router';
 
 
-
-
 const { width, height } = Dimensions.get('window');
 
 const LoginForm = ({ isMobile }) => {
   return (
     <View style={isMobile ? styles.mobileFormContainer : styles.desktopRight}>
-      <Text style={styles.title}>Bem-vindo de volta!</Text>
+      <Text style={styles.title}>Registre-se!</Text>
+
+      <TextInput
+        placeholder="Nome"
+        keyboardType="text"
+        autoCapitalize="none"
+        style={styles.input}
+      />
 
       <TextInput
         placeholder="Email"
@@ -23,15 +28,20 @@ const LoginForm = ({ isMobile }) => {
         secureTextEntry
         style={styles.input}
       />
+      <TextInput
+        placeholder="Confirme sua senha"
+        secureTextEntry
+        style={styles.input}
+      />
 
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
 
       <View style={styles.footer}>
-        <Text>Não tem uma conta? </Text>
+        <Text>Já tem uma conta? </Text>
         <TouchableOpacity>
-        <Link href="/Register" style={styles.linkText}>Registre-se!</Link>
+            <Link href="/Login" style={styles.linkText}>Entrar!</Link>
         </TouchableOpacity>
       </View>
     </View>
