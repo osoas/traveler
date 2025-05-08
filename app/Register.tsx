@@ -7,8 +7,8 @@ import {
     ScrollView,
     View,
 } from 'react-native';
-import LoginForm from '../components/LoginForm';
 import LogoSection from '../components/LogoSection';
+import RegisterForm from '../components/RegisterForm';
 
 const { width } = Dimensions.get('window');
 const isMobile = width < 768;
@@ -27,13 +27,13 @@ const LoginScreen = () => {
             contentContainerStyle={{ flexGrow: 1 }}
           >
             <LogoSection isMobile />
-            <LoginForm isMobile />
+            <RegisterForm isMobile />
           </ScrollView>
         </KeyboardAvoidingView>
       ) : (
         <View style={{ flex: 1, flexDirection: 'row' }}>
           <LogoSection isMobile={false} />
-          <LoginForm isMobile={false} />
+          <RegisterForm isMobile={false} />
         </View>
       )}
     </SafeAreaView>

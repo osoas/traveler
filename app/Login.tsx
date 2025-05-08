@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-    Dimensions,
-    KeyboardAvoidingView,
-    Platform,
-    SafeAreaView,
-    ScrollView,
-    View,
+  Dimensions,
+  KeyboardAvoidingView,
+  Platform,
+  SafeAreaView,
+  ScrollView,
+  View,
 } from 'react-native';
 import LoginForm from '../components/LoginForm';
 import LogoSection from '../components/LogoSection';
