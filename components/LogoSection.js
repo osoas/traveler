@@ -7,7 +7,7 @@ const LogoSection = ({ isMobile }) => {
   return (
     <View style={isMobile ? styles.mobileTop : styles.desktopLeft}>
       <Image
-        source={require('../assets/images/logo.png')}
+        source={require('../assets/images/Grifo.png')}
         style={isMobile ? styles.mobileLogo : styles.desktopLogo}
         resizeMode="contain"
       />
@@ -17,7 +17,7 @@ const LogoSection = ({ isMobile }) => {
 
 const styles = StyleSheet.create({
   mobileTop: {
-    backgroundColor: '#1eb384',
+    backgroundColor: '#008000',
     width,
     height,
     justifyContent: 'center',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   desktopLeft: {
     flex: 6,
-    backgroundColor: '#1eb384',
+    backgroundColor: '#008000',
     justifyContent: 'center',
     alignItems: 'center',
   },
