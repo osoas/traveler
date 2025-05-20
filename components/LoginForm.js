@@ -24,7 +24,8 @@ const LoginForm = ({ isMobile }) => {
         style={styles.input}
       />
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button}
+      Link href="Dasboard">
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
 

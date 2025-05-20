@@ -10,6 +10,7 @@ import {
 import LoginForm from '../components/LoginForm';
 import LogoSection from '../components/LogoSection';
 
+
 const { width } = Dimensions.get('window');
 const isMobile = width < 768;
 
@@ -41,3 +42,4 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
+
