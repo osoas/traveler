@@ -1,34 +1,55 @@
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { Link } from 'expo-router';
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import LoginScreen from '../app/index' 
-
-
-import Icon from '@mdi/react';
-import { mdiHomeAccount } from '@mdi/js';
-
-<Icon path={mdiHomeAccount} size={1} />
+const {width, height} = Dimensions.get('window');
 
 
-const Tab = createBottomTabNavigator();
+style = StyleSheet.create({
+   navBar:{
+    position:'relative',
+    top:0,
+    width:'100%',
+    height:60 ,
+    display:'flex',
+    flexDirection:'row',
+    justifyContent: 'space-around',
+    paddingVertical: 10,
+    backgroundColor: '#008000',
 
-export default function navbar() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
-          name="Home"
-          component={LoginScreen}>
-          options={{
-            headerShown: false,
-            tabBarLabel: 'Home',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name=" mdiHomeAccountu" color={color} size={size} />
-            ),
-          }}
-        </Tab.Screen>
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
+   },
+
+   linkText: {
+     color: '#FFFFFF',
+     padding: 20,
+     
+
+   },
+
+
+
+});
+export default function NavBar() {
+    return(
+       <View style = {style.navBar}>
+        <Link href='/' asChild>
+           <TouchableOpacity>
+             <Text style = {style.linkText}>Inicio</Text>
+           </TouchableOpacity>
+        </Link>
+        
+        <Link href=''>
+            <TouchableOpacity>
+               <Text style = {style.linkText}>Menu</Text> 
+            </TouchableOpacity>        
+        </Link>
+
+
+       </View>
+
+    );
+    
+
+};
+
+

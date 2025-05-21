@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, SafeAreaView, Platform, Dimensions } from 'react-native';
+import { Dimensions, Platform, SafeAreaView } from 'react-native';
 import Navbar from '../components/Navbar';
 
 
@@ -10,17 +10,8 @@ export default function Dashboard() {
     const isMobile = Platform.OS === 'ios' || Platform.OS === 'android';
 
     return (
-        <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            {isMobile ? (
-                <View style={{ flexDirection: 'row' }}>
-                    <Text>This is mobile view</Text>
+        <SafeAreaView style={{ flex: 1 }}>
                     <Navbar/>            
-                </View>
-            ) : (
-                <View style={{ flex: 1, flexDirection: 'row' }}>                 
-        </View>
-                
-            )}
         </SafeAreaView>
     );
 }
