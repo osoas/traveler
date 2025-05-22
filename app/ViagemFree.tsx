@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Navbar from '../components/Navbar';
 
-export default function ViagemFree({ hideNavbar = false }: { hideNavbar?: boolean }) {
+export default function ViagemFree() {
   return (
     <>
       <ScrollView contentContainerStyle={[styles.container, { backgroundColor: '#f5f7fa', minHeight: '100%' }]}>
