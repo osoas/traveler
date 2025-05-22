@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { Link } from 'expo-router';
+import React from 'react';
+import { Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 
 
@@ -25,7 +25,7 @@ const LoginForm = ({ isMobile }) => {
       />
 
       <TouchableOpacity style={styles.button}
-      Link href="Dasboard">
+      Link href="ViagemFree">
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
 
